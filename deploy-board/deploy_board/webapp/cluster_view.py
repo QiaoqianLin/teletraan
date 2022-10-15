@@ -307,8 +307,8 @@ def get_base_images(request):
         'base_images': base_images,
         'provider_list': provider_list,
         'cells_list': cells_list,
-        'arch_list': arches_list,
-        #'arch_list': ['X86', 'ARM'],
+        'arches_list': arches_list,
+        #'arches_list': ['X86', 'ARM'],
         'pageIndex': index,
         'pageSize': DEFAULT_PAGE_SIZE,
         'disablePrevious': index <= 1,
@@ -437,8 +437,8 @@ def get_host_types(request):
     arches_list = cells_helper.get_by_provider(request, DEFAULT_PROVIDER)
 
     return render(request, 'clusters/host_types.html', {
-        'arch_list': arches_list,
-        #'arch_list': ['X86', 'ARM'],
+        'arches_list': arches_list,
+        #'arches_list': ['X86', 'ARM'],
         'host_types': host_types,
         'provider_list': provider_list,
         'pageIndex': index,
